@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/index.css" type="text/css" rel="stylesheet">
+    <title>Terry's Restaurant API</title>
+</head>
+
+<body>
+
+    <h1>Terry's Restaurant API</h1>
+
+    <section>
+        <h2>Introduction</h2>
+
+        <p>
+            Terry's Restaurant API provides information about
+            the restaurant menu.
+        </p>
+
+        <p>
+            The API uses the GET method to retrieve information.
+            and the POST method to send new information to the server.
+        </p>
+    </section>
+
+    <section>
+        <h2>Get Menu</h2>
+
+        <p><strong>Method:</strong> GET</p>
+
+        <p><strong>Endpoint:</strong></p>
+
+        <code>/api/menu</code>
+
+        <p>
+            Returns all available menu items.
+        </p>
+    </section>
+
+    <section>
+        <h2>GET Response Example</h2>
+
+        <pre>
+[
+    {
+        "id": 1,
+        "name": "Spaghetti",
+        "price": 200
+    },
+    {
+        "id": 2,
+        "name": "Empanadas",
+        "price": 25
+    },
+    {
+        "id": 3,
+        "name": "Pizza",
+        "price": 150
+    }
+]
+        </pre>
+    </section>
+
+    
+<section>
+    <h2>Create Menu Item</h2>
+
+    <p><strong>Method:</strong> POST</p>
+
+    <p><strong>Endpoint:</strong></p>
+
+    <code>/api/menu</code>
+
+    <p>
+        The POST method is used to send data to the server
+        to create a new menu item.
+    </p>
+
+</section>
+
+
+<section>
+
+    <h2>POST Request Example</h2>
+
+    <pre>
+{
+    "name": "Hamburger",
+    "price": 120
+}
+    </pre>
+
+</section>
+
+    <section>
+        <h2>HTTP Response</h2>
+
+        <p><strong>200 OK</strong></p>
+
+        <p>
+            The request was successful and the menu
+            information was returned.
+        </p>
+    </section>
+
+    <section>
+        <h2>Request Flow</h2>
+
+        <p>
+            1. The client sends a GET request.
+        </p>
+
+        <p>
+            2. The server receives the request.
+        </p>
+
+        <p>
+            3. The API retrieves the menu information.
+        </p>
+
+        <p>
+            4. The server returns a JSON response.
+        </p>
+    </section>
+
+<section>
+    <h2>HTTP Status Codes</h2>
+
+    <p><strong>200 OK</strong></p>
+    <p>
+        The request was successful. The server returned
+        the requested information.
+    </p>
+
+    <p><strong>201 Created</strong></p>
+    <p>
+        A new resource, such as a menu item, was created
+        successfully.
+    </p>
+
+    <p><strong>400 Bad Request</strong></p>
+    <p>
+        The request contains invalid data or cannot be
+        processed because the information provided is incorrect.
+    </p>
+
+    <p><strong>404 Not Found</strong></p>
+    <p>
+        The requested resource or endpoint could not be found
+        on the server.
+    </p>
+
+    <p><strong>500 Internal Server Error</strong></p>
+    <p>
+        An unexpected error occurred on the server while
+        processing the request.
+    </p>
+</section>
+
+</body>
+</html>
